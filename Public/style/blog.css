@@ -1,0 +1,109 @@
+@charset "utf-8";
+.post-blog {
+    width: 100%;
+    padding: 0 0 22px;
+    margin: 0 0 20px;
+    background-color: #fff;
+}
+.noimg { border-top: 10px solid #900 }
+.img-box {
+    width: 100%;
+    position: relative;
+}
+.tit-blog {
+    width: 580px;
+    padding: 20px 20px 18px;
+    position: relative;
+}
+.tit-blog h3 {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 18px;
+}
+.tit-blog h3 a { color: #333 }
+.tit-blog h3 a:hover{color: #09c;}
+.post-blog-info {
+    width: 100%;
+    padding: 8px 0 0;
+    color: #999;
+    font-size: 12px;
+    line-height: 1.231;
+    overflow: hidden;
+}
+.post-blog-info span {
+    float: left;
+    padding: 0 15px;
+    margin: 0 15px 0 -15px;
+    border-left: 1px solid #ccc;
+}
+.post-blog-info a{
+    color:#999;
+}
+.post-blog-info a:hover{
+    color:#09c;
+}
+.post-blog-des,
+.readall {
+    padding: 0 20px;
+    text-align: justify;
+    color: #666;
+    line-height: 24px;
+}
+.readall a {
+    display: block;
+    padding: 10px 0 0 30px;
+    background: url(../images/ico-more.png) no-repeat 0 13px;
+}
+.form-search {
+    width: 100%;
+    overflow: hidden;
+}
+.form-search .input-text {
+    float: left;
+    width: 201px;
+    height: 28px;
+    padding: 0 0 0 8px;
+    border: 1px solid #ccc;
+    border-right: 0;
+    line-height: 28px;
+    font-size: 14px;
+}
+.form-search .input-sub {
+    float: left;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background: #09c url(../images/ico-search.png) no-repeat 50%;
+}
+.blog-aside-sec { margin: 20px 0 0 }
+.blog-aside-sec h3 {
+    padding: 15px 0 10px;
+    margin: 0 0 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+}
+.blog-aside-sec li {
+    width: 100%;
+    padding: 5px 0;
+    overflow: hidden;
+}
+.blog-aside-sec li a { float: left }
+.blog-aside-sec span {
+    color: #999;
+    float: right;
+}
+.blog-aside-sec .cur { color: #c00 }
+.blog-detail-des {
+    padding: 0 20px 20px;
+    text-align: justify;
+    color: #666;
+    line-height: 24px;
+}
+.share-box {
+    padding: 130px 0 0 20px;
+    color: #999;
+}
+.back { padding-left: 20px }

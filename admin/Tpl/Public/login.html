@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>登录界面</title>
+	<link rel="stylesheet" href="__TEMPLATE__/Public/style/metro.css">
+	<style type="text/css">
+	form{
+		padding: 26px 24px 26px;
+		font-weight: normal;
+		background: #fff;
+		border: 1px solid #e5e5e5;
+		-webkit-box-shadow: rgba(200,200,200,0.7) 0 4px 10px -1px;
+		box-shadow: rgba(200,200,200,0.7) 0 4px 10px -1px;
+		text-align: left;
+	}
+	p{
+		margin:0;
+	}
+	input{
+		margin-bottom: 5px;
+	}
+	body{
+		text-align: center;
+	}
+	</style>
+	
+</head>
+
+<body>
+
+	<!--[if lt IE 7]>
+		<div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; height: 75px; position: relative;'>   
+		<div style='position: absolute; right: 3px; top: 3px; font-family: courier new; font-weight: bold;'>
+		<a href='#' onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;'><img src='__PUBLIC__/admin/images/ie6nomore-cornerx.jpg' style='border: none;' alt='Close this notice'/></a>
+		</div>   
+		<div style='width: 700px; margin: 0 auto; text-align: left; padding: 0; overflow: hidden; color: black;'>     
+		<div style='width: 75px; float: left;'><img src='__PUBLIC__/admin/images/ie6nomore-warning.jpg' alt='Warning!'/></div>     
+		<div style='width: 275px; float: left; font-family: Arial, sans-serif;'>       
+		<div style='font-size: 14px; font-weight: bold; margin-top: 12px;'>您正在使用已经过时的IE 6浏览器！</div>       
+		<div style='font-size: 12px; margin-top: 6px; line-height: 12px;'>由于IE 6的安全问题以及对互联网标准的支持问题，建议您升级您的浏览器，以达到更好的浏览效果！</div>    
+		</div>     
+		<div style='width: 75px; float: left;'><a href='http://www.firefox.com' target='_blank'><img src='__PUBLIC__/admin/images/ie6nomore-firefox.jpg' style='border: none;' alt='获取 Firefox'/></a></div>     
+		<div style='width: 75px; float: left;'><a href='http://www.browserforthebetter.com/download.html' target='_blank'><img src='__PUBLIC__/admin/images/ie6nomore-ie8.jpg' style='border: none;' alt='Get Internet Explorer 8'/></a></div>
+		<div style='width: 73px; float: left;'><a href='http://www.apple.com/safari/download/' target='_blank'><img src='__PUBLIC__/admin/images/ie6nomore-safari.jpg' style='border: none;' alt='获取 Safari'/></a></div>
+		<div style='width: 73px; float: left;'><a href='http://www.opera.com/zh-cn' target='_blank'><img src='__PUBLIC__/admin/images/ie6nomore-opera.jpg' style='border: none;' alt='获取 Opera'/></a></div>  
+		<div style='float: left;'><a href='http://www.google.com/chrome' target='_blank'><img src='__PUBLIC__/admin/images/ie6nomore-chrome.jpg' style='border: none;' alt='获取 Google Chrome'/></a></div>   
+		</div> 
+		</div> 
+	<![endif]-->
+	<div style="width:260px;margin-top:80px;margin-left:auto;margin-right:auto;">
+		<p style="text-align:center;margin-bottom:10px;"><a href="__SELF__" style="font-size:38px;text-decoration:none;">ZuiliveCMS</a></p>
+	<form action="__URL__/checkLogin" method="post">
+		 用户名<input type="text"  name="username">
+		 密码<input type="password"  name="password">
+		 验证码<input type="text"  name="verify"><br><img src="__URL__/verify"><br><br>
+
+		 <button type="submit" class="btn btn-small btn-primary">登录</button>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="">忘记密码？</a>
+
+	</form>
+	</div>
+</body>
+</html>

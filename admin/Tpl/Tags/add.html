@@ -1,0 +1,40 @@
+<form class="form-horizontal cate well" id="zForm" action="__APP__/tags/add" onsubmit="return validateCallback(this, dialogAjaxDone);" method="post" layoutH="0">
+					
+				  <fieldset>
+				    
+				    <div class="control-group">
+				      <label class="control-label" for="disabledInput">标签名称：</label>
+				      <div class="controls">
+				        <input type="text" class="input-xlarge"  id="disabledInput"  name="name">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="urlname">URL名称：</label>
+				      <div class="controls">
+				        <input type="text" class="input-xlarge required" id="urlname" placeholder="请输入URL名称..." name="urlname">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="keywords">关键字：</label>
+				      <div class="controls">
+				        <input type="text" class="input-xlarge" id="keywords" placeholder="请输入关键字..." name="keywords">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="description">描述：</label>
+				      <div class="controls">
+				        <textarea name="description" class="input-xlarge" id="description"></textarea>
+				      </div>
+				    </div>
+
+			        <div class="control-group">
+				      <label class="control-label" for="pid"></label>
+				      <div class="controls">
+				        <input type="submit" class="btn btn-primary btn-small" value="提交">
+				      </div>
+				    </div>
+				  </fieldset>
+				</form>

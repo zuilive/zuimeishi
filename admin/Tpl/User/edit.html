@@ -1,0 +1,63 @@
+<form class="form-horizontal cate well" id="zForm" onsubmit="return validateCallback(this, dialogAjaxDone);" layoutH="0" action="__APP__/user/edit" method="post">
+				  <fieldset>
+				    <input type="hidden" name="id" value="<{$Think.get.id}>">
+				    <div class="control-group">
+				      <label class="control-label" for="input01">用户名：</label>
+				      <div class="controls">
+				        <input type="text" class="input-xlarge required disabled" id="input01" name="username" value="<{$uinfo['username']}>" placeholder="请输入用户名..." disabled>
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="password">密码：</label>
+				      <div class="controls">
+				        <input type="text" class="input-xlarge" id="password" placeholder="请输入密码..." name="password">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="repassword">确认密码：</label>
+				      <div class="controls">
+				        <input type="password" class="input-xlarge" id="repassword" name="repassword" placeholder="请输入确认密码...">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="email">邮箱：</label>
+				      <div class="controls">
+				        <input type="text" value="<{$uinfo['email']}>" class="input-xlarge" id="email" name="email" placeholder="请输入邮箱...">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="role_id">用户组：</label>
+				      <div class="controls">
+				        <select id="role_id" name="role_id">
+				        	<volist name="rlist" id="vo">
+			                <option value="<{$vo.id}>" <eq name="vo.id" value="$uinfo.role_id">selected="selected"</eq>><{$vo['name']}></option>
+			               </volist>
+			            </select>
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+			            <label class="control-label">状态：</label>
+			            <div class="controls">
+			              <label class="radio">激活
+			                <input type="radio" style="height:auto;" name="status" id="status" value="1" <eq name="uinfo.status" value="1">checked="checked"</eq> ></label>
+
+			              <label class="radio">禁用
+			                <input type="radio" style="height:auto;" name="status" id="status" <eq name="uinfo.status" value="2">checked="checked"</eq> value="2">
+			                </label>
+			              
+			            </div>
+			         </div>
+
+			        <div class="control-group">
+				      <label class="control-label" for="pid"></label>
+				      <div class="controls">
+				        <button type="submit" class="btn btn-primary btn-small">编辑</button>
+				      </div>
+				    </div>
+				  </fieldset>
+				</form>

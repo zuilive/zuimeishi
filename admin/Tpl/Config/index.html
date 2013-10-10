@@ -1,0 +1,72 @@
+<div layoutH="0" style="padding:10px;">			
+			<ul class="nav nav-pills" style="height:32px;border-bottom:1px solid #dedede;" >
+			    <li class="active"><a href="__APP__/config/index" rel="Config_index" target="navTab" title="站点设置">站点设置</a></li>
+			    <li><a href="__APP__/config/email" rel="Config_email" target="navTab" title="邮箱设置">邮箱设置</a></li>
+			</ul>
+			<form class="form-horizontal cate well" onsubmit="return validateCallback(this, navTabAjaxDone);" action="__APP__/Config/index" method="post" >
+				  <fieldset>  
+				    <div class="control-group">
+				      <label class="control-label" for="input01">网站名称：</label>
+				      <div class="controls">
+				        <input type="text" class="input-xlarge" value="<{$list['0']['value']}>" id="input01" name="sitename"placeholder="请输入站点名称...">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="siteseotitle">SEO标题：</label>
+				      <div class="controls">
+				        <input type="text" class="input-xlarge" value="<{$list['5']['value']}>" id="siteseotitle" name="siteseotitle"placeholder="请输入站点SEO名称...">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="siteurl">网站地址：</label>
+				      <div class="controls">
+				        <input type="text" value="<{$list['1']['value']}>"  class="input-xlarge" id="siteurl" placeholder="请输入站点地址..." name="siteurl">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="siteemail">站点邮箱：</label>
+				      <div class="controls">
+				        <input type="text" value="<{$list['2']['value']}>"  class="input-xlarge" id="siteemail" placeholder="请输入站点邮箱..." name="siteemail">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="siteinfo">网站描述：</label>
+				      <div class="controls">
+				        <textarea name="siteinfo" class="input-xlarge" id="siteinfo"><{$list['3']['value']}></textarea>
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="sitekeywords">关键字：</label>
+				      <div class="controls">
+				        <input type="text" value="<{$list['4']['value']}>"  class="input-xlarge" id="sitekeywords" placeholder="请输入站点关键字..." name="sitekeywords">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="icp">备案号：</label>
+				      <div class="controls">
+				        <input type="text" value="<{$list['6']['value']}>"  class="input-xlarge" id="icp" placeholder="请输入备案号..." name="icp">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="statistical">统计代码：</label>
+				      <div class="controls">
+				        <textarea name="statistical" class="input-xlarge" id="statistical"><{$list['7']['value']}></textarea>
+				      </div>
+				    </div>
+
+			        <div class="control-group">
+				      <label class="control-label" for="pid"></label>
+				      <div class="controls">
+				        <button type="submit" class="btn btn-primary btn-small">提交</button>
+				      </div>
+				    </div>
+				  </fieldset>
+				</form>
+</div>

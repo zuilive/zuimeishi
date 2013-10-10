@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>美食每刻-店铺页面</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="__TEMPLATE__/Public/css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="__TEMPLATE__/Public/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<include file="Public:menu" />
+<!--店铺信息-->
+<div class="container">
+	<div class="shop_header shadow">
+		<div class="row-fluid">
+			<div class="span8">
+				<div class="shop_info">
+					<div ><span class="title"><{$shopInfo['name']}></span> <span class="status">正在营业</span></div>
+				</div>
+				<div class="row-fluid">
+					<div class="span6">
+						<p>起送价：<span class="tip"><{$shopInfo['low_send_prize']}>元</span> 起</p>
+						<p>平均送餐时间：<span class="tip"><{$shopInfo['send_time']}></span>分钟</p>
+						<p>送餐费：<span class="tip">免费</span></p>
+						<p>地址：<{$shopInfo['address']}></p>
+					</div>
+					<div class="span6">
+						<p>派送时间：10:00-20:00;</p>
+						<p>最近一周订单：202份</p>
+						<p>主营业务：套餐，小炒，炒饭</p>
+					</div>
+				</div>
+				<div class="gonggao">
+					店铺公告：<{$shopInfo['post']}>
+				</div>
+
+			</div>
+			<div class="span4">
+				<div class="img">
+					<img src="__ROOT__/Upload/<{$shopInfo['picture']}>" alt="<{$shopInfo['name']}>">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--菜品列表-->
+<div class="container">
+	<div class="food-list shadow">
+		<div class="row-fluid">
+			<div class="span8">
+				<div class="cate">菜品分类</div>
+				<div class="food row-fluid">
+					<div class="span5">菜名</div>
+					<div class="span2">15元/份</div>
+					<div class="span3">图片</div>
+					<div class="span2">来一份</div>
+				</div>
+			</div>
+			<div class="span4">点菜</div>
+		</div>
+	</div>
+</div>
+
+<include file="Public:footer" />

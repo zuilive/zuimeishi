@@ -1,0 +1,50 @@
+<form class="form-horizontal cate well" action="__APP__/role/edit" method="post" onsubmit="return validateCallback(this, dialogAjaxDone);" layoutH="0">
+				  <fieldset>
+				    <input type="hidden" name="id" value="<{$Think.get.id}>">
+				    <div class="control-group">
+				      <label class="control-label" for="input01">角色名：</label>
+				      <div class="controls">
+				        <input type="text" class="input-xlarge" id="input01" name="name"placeholder="请输入角色名..." value="<{$rinfo['name']}>">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="role_id">父角色：</label>
+				      <div class="controls">
+				        <select id="role_id" name="role_id">
+				        	<option value="0">顶级角色</option>
+				        	<volist name="list" id="vo">
+			               <option value="<{$vo.id}>" <eq name="rinfo.pid" value="vo.id">checked="checked"</eq> ><{$vo.name}></option>
+			               </volist>
+			            </select>
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+			            <label class="control-label">状态：</label>
+			            <div class="controls">
+			              <label class="radio">激活
+			                <input type="radio" style="height:auto;" name="status" id="status" value="1" <eq name="rinfo.status" value="1">checked="checked"</eq> ></label>
+
+			              <label class="radio">禁用
+			                <input type="radio" style="height:auto;" <eq name="rinfo.status" value="2">checked="checked"</eq> name="status" id="status" value="2">
+			                </label>
+			              
+			            </div>
+			         </div>
+
+			         <div class="control-group">
+				      <label class="control-label" for="remark">备注：</label>
+				      <div class="controls">
+				        <textarea name="remark" class="input-xlarge" id="remark"><{$rinfo['remark']}></textarea>
+				      </div>
+				    </div>
+
+			        <div class="control-group">
+				      <label class="control-label" for="pid"></label>
+				      <div class="controls">
+				        <button type="submit" class="btn btn-primary btn-small">提交</button>
+				      </div>
+				    </div>
+				  </fieldset>
+				</form>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>美食每刻-首页</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="__TEMPLATE__/Public/css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="__TEMPLATE__/Public/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<include file="Public:menu" />
+
+<!--banner-->
+<div class="banner">
+	<div class="container">
+		<div class="row">
+			<div class="span9">
+				<!--幻灯片-->
+				<div class="slideshow shadow">
+					<div id="myCarousel" class="carousel slide">
+				                	<div class="carousel-inner">
+					          		<div class="item">
+						                    <img src="__TEMPLATE__/Public/img/banner.jpg" alt="">
+						                    <div class="carousel-caption">
+						                      	<h4>First Thumbnail label</h4>
+						                      	<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+						                    </div>
+					          		</div>
+					           	<div class="item active">
+						                    <img src="__TEMPLATE__/Public/img/banner.jpg" alt="">
+						                    <div class="carousel-caption">
+						                      	<h4>Second Thumbnail label</h4>
+						                     	<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+						                    </div>
+					                  	</div>
+					                  	<div class="item">
+						                    <img src="__TEMPLATE__/Public/img/banner.jpg" alt="">
+						                    <div class="carousel-caption">
+						                      	<h4>Third Thumbnail label</h4>
+						                      	<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+						                    </div>
+					                  	</div>
+				                	</div>
+				                	<a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+				                	<a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+				          </div>
+				</div>	
+			</div>
+
+			<div class="span3">
+				<!--今日推荐-->
+				<div class="tuijian shadow">
+					<div class="title">今日推荐</div>
+					<img src="__TEMPLATE__/Public/img/tuijian.png" alt="">
+					<div class="name">法司蛋糕</div>
+				</div>
+				
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<!--店铺列表-->
+<div class="shop_list">
+	<div class="container">
+		<div class="box_title shadow">美味从这里开始</div>
+
+		<div class="row">
+			<volist name="shopList" id="vo">
+			<div class="span3">
+				<div class="shop_box shadow">
+					<a href="__APP__/shop/index/id/<{$vo['id']}>">
+						<div class="img"><img src="__ROOT__/Upload/<{$vo['picture']}>" alt="<{$vo['name']}>" width="220" height="140"></div>
+						<div class="title"><{$vo['name']}></div>
+						<span class="info"><{$vo['low_send_prize']}>元起送,总评分4.8</span>
+					</a>
+				</div>
+			</div>
+			</volist>
+			
+		</div>
+	</div>
+	
+</div>
+
+<include file="Public:footer" />

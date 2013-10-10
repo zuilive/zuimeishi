@@ -1,0 +1,29 @@
+
+<div class="header navbar-fixed-top">
+		<div class="navbar">
+			
+			<div class="navbar-inner">
+				<div class="container">
+				<a class="brand" href="#">美食每刻</a>
+				<ul class="nav">
+				      	<volist name="menu" id="vo">
+					<eq name="vo.group" value="主导航"><li><a href="<{$vo['url']}>"><{$vo['name']}></a></li></eq>
+				      	</volist>
+				</ul>
+
+				<ul class="nav pull-right">
+					<li class="area"><a href="">瑯琊区</a></li>
+					<li class="login">
+						<if condition="$isLogin eq 1 ">
+							<a href="__APP__/user"><{$uinfo['username']}></a>
+						<elseif condition="$isLogin eq 0" />
+							<a href="__APP__/user/login">登录</a>
+						</if>
+						
+					</li>
+				</ul>
+				</div>
+			</div>
+			
+		</div>
+</div>

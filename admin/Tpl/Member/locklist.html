@@ -1,0 +1,69 @@
+<form id="pagerForm" method="post" action="#rel#">
+	<input type="hidden" name="pageNum" value="1" />
+	<input type="hidden" name="numPerPage" value="<{$numPerPage}>" />
+	<input type="hidden" name="orderField" value="" />
+	<input type="hidden" name="orderDirection" value="" />
+</form>
+
+<div class="pageHeader">
+	<form rel="pagerForm" class="well" onsubmit="return navTabSearch(this);" action="__APP__/member/locklist" method="post">
+	<div class="searchBar">
+		<input placeholder="输入会员名..." value="<{$keywords}>" type="text" class="input-mini" name="keywords" value=""/>
+		<button class="btn btn-primary btn-mini">搜索</button>
+	</div>
+	</form>
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="__APP__/member/add" rel="Member_add" target="dialog" width="450" height="580" title="添加会员"><span><i class="icon-pencil"></i> 添加会员</span></a></li>
+			<li><a title="确实要解锁吗?" target="selectedTodo" rel="id[]" href="__APP__/member/unlock" class="delete"><span><i class="icon-lock"></i> 批量解锁</span></a></li>
+		</ul>
+	</div>
+	<table class="table" layoutH="130" width="100%">
+		<thead>
+			<tr>
+				<th><input type="checkbox" group="id[]" class="checkboxCtrl"></th>
+				<th>ID</th>
+				<th>用户名</th>
+				<th>邮箱</th>
+
+				<th>最后登录时间</th>
+				<th>上次登录IP</th>
+				<th>积分</th>
+				<th>管理操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<volist name="list" id="vo">
+				<tr>
+				    <td><input value="<{$vo.userid}>" name="id[]" type="checkbox"></td>
+				    <td><{$vo.userid}></td>
+				    <td><{$vo.username}></td>
+				    <td><{$vo.email}></td>
+
+				    <td><{$vo.lastdate|date="Y-m-d H:i:s",###}></td>
+				    <td><{$vo.lastip}></td>
+				    <td><{$vo.point}></td>
+				    <td><a class="btn btn-mini btn-info" href="__APP__/member/unlock?id=<{$vo.userid}>" title="解锁？" target="ajaxTodo"><i class="icon-lock icon-white"></i>解锁</a></td>
+				</tr>
+			</volist>
+		
+		</tbody>
+	</table>
+	<div class="panelBar panBar">
+		<div class="pages">
+			<span>显示</span>
+			<select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
+				<option value="15" <eq name="numPerPage" value="15">selected="selected"</eq> >15</option>
+				<option value="50" <eq name="numPerPage" value="50">selected="selected"</eq> >50</option>
+				<option value="100" <eq name="numPerPage" value="100">selected="selected"</eq> >100</option>
+				<option value="200" <eq name="numPerPage" value="200">selected="selected"</eq> >200</option>
+			</select>
+			<span>条，共<{$count}>条</span>
+		</div>
+		
+		<div class="pagination" targetType="navTab" totalCount="<{$count}>" numPerPage="<{$numPerPage}>" pageNumShown="5" currentPage="<{$p}>"></div>
+
+	</div>
+</div>

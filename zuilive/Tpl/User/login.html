@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>美食每刻-登录</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+
+	<link href="__TEMPLATE__/Public/css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="__TEMPLATE__/Public/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="body_login">
+
+	<include file="Public:menu" />
+
+<!--登录-->
+<div class="login_box">
+	<div class="container">
+		<div class="box shadow">
+			<div class="title">账号登录</div>
+			<form action="__SELF__" method="post">
+				<div class="input-prepend">
+				  	<span class="add-on">账号 :</span>
+				  	<input class="" name="uname" type="text" placeholder="账号">
+				</div>
+				<div class="input-prepend">
+				  	<span class="add-on">密码 :</span>
+				  	<input class="" name="pass" type="password" placeholder="密码">
+				</div>
+				<button class="btn btn-success" type="submit">登录</button>
+				<a class="btn "  href="__URL__/register">注册</a>
+			</form>
+		</div>
+	</div>
+</div>
+
+<include file="footer" />

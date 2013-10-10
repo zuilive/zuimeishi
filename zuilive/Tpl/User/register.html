@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>美食每刻-注册</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+
+	<link href="__TEMPLATE__/Public/css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="__TEMPLATE__/Public/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="body_login">
+
+	<include file="Public:menu" />
+
+<!--注册-->
+<div class="login_box register">
+	<div class="container">
+		<div class="box shadow">
+			<div class="title">用户注册</div>
+			<form action="__SELF__" method="post">
+				<input type="hidden" name="encrypt" value="<{$encrypt}>">
+				<div class="input-prepend">
+				  	<span class="add-on">账号 :</span>
+				  	<input class="" name="username" type="text" placeholder="账号">
+				</div>
+
+				<div class="input-prepend">
+				  	<span class="add-on">手机 :</span>
+				  	<input class="" name="phone" type="text" placeholder="手机">
+				</div>
+
+				<div class="input-prepend">
+				  	<span class="add-on">邮箱 :</span>
+				  	<input class="" name="email" type="text" placeholder="邮箱">
+				</div>
+
+				<div class="input-prepend">
+				  	<span class="add-on">密码 :</span>
+				  	<input class="" name="password" type="password" placeholder="密码">
+				</div>
+
+				<div class="input-prepend">
+				  	<span class="add-on">确认密码 :</span>
+				  	<input class="" name="repassword" type="password" placeholder="确认密码">
+				</div>
+
+				<div><input type="checkbox">同意<a href="">美食每刻服务条款</a></div><br>
+
+				<button class="btn "  type="submit">注册</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<include file="footer" />

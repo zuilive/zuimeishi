@@ -1,0 +1,94 @@
+<form class="form-horizontal cate well" id="zForm" onsubmit="return validateCallback(this, dialogAjaxDone);" layoutH="0" action="__APP__/shop/add" method="post">
+				  <fieldset>
+				    
+				    <div class="control-group">
+				      <label class="control-label" for="name">店铺名：</label>
+				      <div class="controls">
+				        <input type="text" class="input-xlarge required" id="name" name="name" placeholder="请输入店铺名...">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="low_send_prize">起送价：</label>
+				      <div class="controls">
+				        <input type="text" class="input-small required" id="low_send_prize" placeholder="起送价..." name="low_send_prize"> 元
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="send_time">送餐时间：</label>
+				      <div class="controls">
+				        <input type="text" class="input-small required" id="send_time" name="send_time" placeholder="送餐时间..."> 分钟
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="open_time">营业时间：</label>
+				      <div class="controls">
+				        <input type="text" class="input-xlarge" id="open_time" name="open_time" placeholder="请输入营业时间...">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="post">公告：</label>
+				      <div class="controls">
+				        <textarea name="post" id="post" cols="60" rows="6"></textarea>
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="open_time">送餐费：</label>
+				      <div class="controls">
+				        <input type="text" class="input-small required" id="open_time" name="open_time" placeholder="送餐费..."> 元
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="display">排序：</label>
+				      <div class="controls">
+				        <input type="text" class="input-small required" id="display" name="display" placeholder="排序..."> (数值越大越靠前)
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="picture">缩略图：</label>
+				      <div class="controls">
+				        <img id="photo" src="__ROOT__/Upload/default.png" alt="">
+					<input id="testFileInput" type="file" name="image" 
+							uploaderOption="{
+								swf:'__PUBLIC__/js/uploadify/scripts/uploadify.swf',
+								uploader:'__APP__/article/upload',
+								buttonText:'请选择文件',
+								fileSizeLimit:'2000KB',
+								fileTypeDesc:'*.jpg;*.jpeg;*.gif;*.png;',
+								fileTypeExts:'*.jpg;*.jpeg;*.gif;*.png;',
+								auto:true,
+								multi:false,
+								onUploadSuccess:uploadifySuccess,
+							}"
+					/>
+					<input type="hidden" name="picture" id="thumbnails"/>
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+			            <label class="control-label">状态：</label>
+			            <div class="controls">
+			              <label class="radio">正常
+			                <input type="radio" style="height:auto;" name="status" id="status" value="1" checked="checked"></label>
+
+			              <label class="radio">未审核
+			                <input type="radio" style="height:auto;" name="status" id="status" value="2">
+			                </label>
+			              
+			            </div>
+			         </div>
+
+			        <div class="control-group">
+				      <label class="control-label" for="pid"></label>
+				      <div class="controls">
+				        <button type="submit" class="btn btn-primary btn-small">提交</button>
+				      </div>
+				</div>
+				</fieldset>
+				</form>

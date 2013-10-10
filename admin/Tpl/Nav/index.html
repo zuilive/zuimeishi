@@ -1,0 +1,47 @@
+<form id="pagerForm" method="post" action="#rel#">
+	
+</form>
+
+<div class="pageHeader" style="display:none;">
+	<form rel="pagerForm" class="well" onsubmit="return navTabSearch(this);" action="__APP__/nav/index" method="post">
+	
+	</form>
+</div>
+<div  class="pageContent">
+<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="__APP__/nav/add" rel="Nav_add" title="添加导航" target="dialog" width="500" height="420"><span><i class="icon-plus"></i> 添加导航</span></a></li>
+			<li><a title="确实要删除这些导航吗?" target="selectedTodo" rel="id[]" href="__APP__/nav/del" class="delete"><span><i class="icon-remove"></i> 批量删除</span></a></li>
+		
+		</ul>
+	</div>
+	<table class="table" layoutH="0" width="100%">
+		<thead>
+			<tr>
+				<th><input type="checkbox" group="id[]" class="checkboxCtrl"></th>
+				<th>ID</th>
+		        <th>名称</th>
+		        <th>URL</th>
+		        <th>分组</th>
+		        <th>排序</th>
+		        <th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<volist name="list" id="vo">
+				<tr>
+				    <td><input value="<{$vo.id}>" name="id[]" type="checkbox"></td>
+				    <td><{$vo.id}></td>
+		            <td>
+						<{$vo.name}>
+		            </td>
+		            <td><{$vo.url}></td>
+		            <td><{$vo.group}></td>
+		            <td><{$vo.display}></td>
+				    <td><a href="__APP__/nav/edit?id=<{$vo.id}>" rel="Nav_edit" target="dialog" width="500" height="420" title="编辑导航" class="btn btn-mini btn-info" ><i class="icon-edit icon-white"></i>编辑</a>  <a href="__APP__/nav/del?id=<{$vo.id}>" title="删除?" target="ajaxTodo" class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>删除</a></td>
+				</tr>
+			</volist>
+		
+		</tbody>
+	</table>
+</div>

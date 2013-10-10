@@ -1,0 +1,55 @@
+<script type="text/javascript">
+				<!--
+				var setting = {
+					check: {
+						enable: true,
+						chkStyle:"checkbox",
+					},
+					data: {
+						simpleData: {
+							enable: true,
+							idKey:"id",
+						}
+					},
+				};
+
+				var zNodes =[
+					<volist name="nodelist" id="vo">
+					{ id:<{$vo.id}>, pId:<{$vo.pid}>, name:"<{$vo.title}>", open:true,
+					<volist name="list" id="v"><eq name="vo.id" value="$v.node_id">checked:true</eq></volist>},
+					</volist>
+
+				];
+
+				$(document).ready(function(){
+					$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+					$("#tijiao").mouseover(function(){
+				    	$("#zhi").val(onCheck());
+				    	//alert(onCheck());
+				    });
+				});
+
+				function onCheck(e,treeId,treeNode){
+		            var treeObj=$.fn.zTree.getZTreeObj("treeDemo"),
+		            nodes=treeObj.getCheckedNodes(true),
+		            v="";
+		            
+		        	for(var i=0;i<nodes.length;i++){
+		            	v+=nodes[i].id + ",";
+	          	 	}
+
+	          	 	return v;
+            	};
+
+            	
+				//-->
+			</script>
+			<div class="well">
+			<ul id="treeDemo" class="ztree" style="border:1px solid #999;background:none;"></ul>
+			<br>
+			<form action="__URL__/shouquan" method="post" onsubmit="return validateCallback(this, dialogAjaxDone);">
+				<input type="hidden" name="id" value="<{$Think.get.id}>" />
+				<input type="hidden" id="zhi" name="accessid" />
+				<button class="btn btn-primary btn-small" id="tijiao">提交</button>
+			</form>
+			</div>

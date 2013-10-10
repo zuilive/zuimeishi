@@ -1,0 +1,491 @@
+.clear{
+	clear: both;
+}
+li{
+	list-style: none;
+}
+ul{
+	margin: 0;
+}
+/*******头部*******/
+#header{
+	background: #1F262D;
+	height: 90px;
+}
+#container{
+	top: 85px;
+	text-align: left;
+}
+/* ProgressBar */
+.progressBar {
+	border:solid 1px #bce8f1; 
+	background:#d9edf7 url(./images/progressBar/progressBar_m.gif) no-repeat 10px 10px;
+	color: #3a87ad;
+	-webkit-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+	box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+}
+
+/******窗口样式******/
+.resizable_f_c{
+	background: #eee;
+}
+.dialog{
+	-webkit-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+	box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+	border: 1px solid #CAC6C6;
+}
+.dialog .dialogHeader{
+	background-color: #55B85B;
+	-webkit-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+	box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+}
+.dialog .dialogHeader h1{
+	font-size: 15px;
+	line-height: 20px;
+	font-weight: bold;
+	color: #fff;
+}
+.dialogContent form,.layoutBox form,.unitBox form{
+	background-color: #fff;
+}
+.dialog .dialogContent,.dialog .layoutBox,.dialog .unitBox{
+	background: #eee;
+}
+#taskbar{
+	background-color: #414141;
+	color: #fff;
+}
+#taskbar .taskbarContent li{
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+}
+#taskbar .taskbarContent li.selected{
+	background-color: #55B85B;
+}
+#taskbar .close{
+	background: url(images/tabspage_icon.png) 0 -50px no-repeat;
+}
+.dialog .dialogHeader .close, .dialog .dialogHeader .maximize, .dialog .dialogHeader .restore, .dialog .dialogHeader .minimize, .resizable_f_r{
+	background-image: url(images/dialogpanel_icon.png);
+	opacity: 1;
+	filter:alpha(opacity=100);
+}
+.dialog .tabs .tabsContent{
+	padding: 10px;
+	background-color: #fff;
+	border:1px solid #c1c1c1;
+	border-top: none;
+}
+.dialog .tabs .tabsHeader li.selected{
+	background-color: #fff;
+}
+/***********横导航**********/
+#navMenu{
+	background: #28B779;
+}
+#navMenu a{
+	color: #fff;
+}
+#navMenu li.selected{
+	background: #fff;
+}
+#navMenu li.selected a{
+	color: #28B779;
+}
+/*******左侧隐藏********/
+.toggleCollapse,.toggleCollapse h2{
+	color: #fff;
+	font-size: 12px;
+
+	margin: 0;
+}
+#leftside #sidebar{
+	background: #2E363F;
+	color: #939da8;
+}
+#sidebar .accordion,#sidebar .toggleCollapse{
+	border: none;
+}
+.accordionHeader{
+	font-size: 12px;
+	font-weight: normal;
+	border-bottom: 1px solid #1F262D;
+	border-top: 1px solid #37414B;
+	padding:5px 10px;
+	overflow: hidden;
+}
+.accordionHeader ul{
+	overflow: hidden;
+}
+.accordionHeader:hover{
+	background: #27A9E3;
+	color: #fff;
+}
+.accordionHeader span{
+	margin-left: 10px;
+}
+
+#sidebar  a{
+	color: #939da8;
+	border-top: 1px solid #37414B;
+	border-bottom: 1px solid #1F262D;
+	background: #1E242B;
+	padding: 5px 10px;
+	width: 200px;
+	display: block;
+	text-decoration: none;
+}
+#sidebar  a:hover{
+	background: #28b779;
+	color: #fff;
+}
+#layout #leftside{
+	top:85px;
+}
+#layout #container{
+	top: 85px;
+}
+#leftside #sidebar{
+	left: 0;
+}
+#splitBar{
+	background: #28b779;
+	top: 85px;
+}
+#sidebar_s{
+	background: #2E363F;
+}
+#sidebar_s:hover{
+	background: #28b779;
+}
+#sidebar_s .toggleCollapse div i{
+	margin: 5px 0 0 5px;
+}
+#header .logo{
+	background: url(./images/logo.png) 10px center no-repeat;
+}
+
+/**********左右移动选项卡*********/
+.tabsPageHeader{
+	background: #EFEFEF;
+	border-bottom:1px solid #CDCDCD;
+}
+.navTab-tab .selected{
+	background: #F9F9F9;
+}
+.tabsPage .tabsPageHeader li .close, .tabsPage .tabsPageHeader li.hover .close, .tabsPage .tabsPageHeader li.selected .close {
+	background: url(./images/tabspage_icon.png) no-repeat;
+	opacity: 1;
+	filter:alpha(opacity=100);
+}
+.tabsPage .tabsLeft{
+	background: url(../../../images/glyphicons-halflings.png) -235px -91px no-repeat;
+}
+.tabsPage .tabsLeftDisabled{
+	background: url(../../../images/glyphicons-halflings-white.png) -235px -91px no-repeat;
+}
+.tabsPage .tabsRight{
+	background: url(../../../images/glyphicons-halflings.png) -261px -91px no-repeat;
+}
+.tabsPage .tabsRightDisabled{
+	background: url(../../../images/glyphicons-halflings-white.png) -261px -91px no-repeat;
+}
+/****信息框****/
+.alert{
+	background: none;
+}
+.alert .error{
+	text-shadow: none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	border: 0px;
+	background-color: #f2dede;
+	border-color: #eed3d7;
+	color: #b94a48;
+	padding: 8px 14px 8px 14px;
+	-webkit-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+	box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+}
+.alert .alertInner{
+	border-width: 0;
+}
+.alert .confirm{
+	text-shadow: none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	border: 0px;
+	background-color: #D9EDF7;
+	border-color: #eed3d7;
+	color: #0A90BC;
+	padding: 8px 14px 8px 14px;
+	-webkit-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+	box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+}
+.alert .correct{
+	background-color: #DFF0D8;
+	text-shadow: none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	border: 0px;
+	border-color: #eed3d7;
+	color: #468847;
+	padding: 8px 14px 8px 14px;
+	-webkit-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+	box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+}
+.alert h1{padding: 0;font-weight: bold;}
+
+.button span{
+	font-weight: normal;
+}
+.alert .button{
+
+	display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #333333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  background-color: #eeeeee;
+  background-image: -moz-linear-gradient(top, #eeeeee, #eeeeee);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eeeeee), to(#eeeeee));
+  background-image: -webkit-linear-gradient(top, #eeeeee, #eeeeee);
+  background-image: -o-linear-gradient(top, #eeeeee, #eeeeee);
+  background-image: linear-gradient(to bottom, #eeeeee, #eeeeee);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeeeeee', endColorstr='#ffeeeeee', GradientType=0);
+  border-color: #eeeeee #eeeeee #c8c8c8;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #eeeeee;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  *margin-left: .3em;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+
+}
+.alert .correct .button{
+	color: #ffffff;
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+background-color: #5bb75b;
+background-image: -moz-linear-gradient(top, #62c462, #51a351);
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
+background-image: -webkit-linear-gradient(top, #62c462, #51a351);
+background-image: -o-linear-gradient(top, #62c462, #51a351);
+background-image: linear-gradient(to bottom, #62c462, #51a351);
+background-repeat: repeat-x;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462', endColorstr='#ff51a351', GradientType=0);
+border-color: #51a351 #51a351 #387038;
+border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.alert .confirm .button{
+	color: #ffffff;
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+background-color: #49afcd;
+background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
+background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
+background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
+background-image: linear-gradient(to bottom, #5bc0de, #2f96b4);
+background-repeat: repeat-x;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff2f96b4', GradientType=0);
+border-color: #2f96b4 #2f96b4 #1f6377;
+border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.alert .error .button {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #da4f49;
+  background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
+  background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
+  background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
+  background-image: linear-gradient(to bottom, #ee5f5b, #bd362f);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
+  border-color: #bd362f #bd362f #802420;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #bd362f;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.alert .error .button:hover,
+.alert .error .button:active,
+.alert .error .button.active,
+.alert .error .button.disabled,
+.alert .error .button[disabled] {
+  color: #ffffff;
+  background-color: #bd362f;
+  *background-color: #a9302a;
+}
+.alert .error .button:active,
+.alert .error .button.active {
+  background-color: #942a25 \9;
+}
+.alert .alertInner .msg{
+	margin: 0;
+}
+/*******Form*******/
+.edui-default{border: none;}
+#pagerForm{
+	margin: 0;
+}
+form.well{
+	padding: 10px;
+	margin: 0;
+}
+.pageHeader .searchBar{
+	height: 30px;
+	overflow: hidden;
+}
+.pageHeader .searchBar button{
+	margin-bottom: 12px;
+}
+.searchBar label{
+	line-height: 35px;
+	width: 50px;
+}
+.pageHeader{
+	border-width: 0;
+}
+.pageContent{
+	padding: 5px;
+	border-width: 0;
+}
+.panelBar{
+	border-width: 0;
+	background-color: #F5F5F5;
+}
+.searchBar .input-mini{
+	height: 18px;
+	font-size: 12px;
+	width: 80px;
+}
+.searchBar .btn-mini{
+	padding: 1px 7px;
+}
+	/******修正上传控件*******/
+#file_upload{position: relative;}
+/*********分页*********/
+.panelBar{
+	background: #EFEFEF;
+	border-top: 1px solid #CDCDCD;
+
+}
+.pagination{
+	margin: 0;
+}
+.pagination  ul{
+	float: right;
+} 
+.panBar{
+	height: 33px;
+	padding: 4px 0;
+}
+.pagination ul > li > a, .pagination ul > li > span{
+	padding: 2px 10px;
+}
+.pagination ul > li.selected > a{
+	color: #999999;
+	background-color: #EFEFEF;
+}
+.pagination .textInput{
+	width: 10px;
+	height: 20px;
+}
+.jumpto{
+	margin-left: 20px;
+}
+.goto{
+	margin-top: -13px;
+}
+/*Side*/
+.side{
+	width: 140px;
+	float: left;
+	border-right: 1px solid #eee;
+	z-index: 1;
+}
+.side-right{
+	margin-left: 150px;
+}
+.side .nav-header{
+	font-size: 14px;
+	color: #555;
+}
+.right-box{
+	width: 170px;
+	float: right;
+}
+.left-box{
+	margin-right: 224px;
+
+}
+.left-box input,.cate input{
+	height: 35px;
+}
+.left-box.well,.right-box.well,.cate.well{
+	border: 1px solid #eee;
+}
+.form-horizontal .control-label{
+	width: 80px;
+}
+.form-horizontal .controls{
+	margin-left: 100px;
+}
+.form-horizontal .control-group:after{
+	clear: none;
+}
+.selauto{
+	width: 100%;
+}
+.table input[type="checkbox"]{
+	margin-bottom: 8px;
+}
+#emailset .control-label{
+	width: 130px;
+}
+
+/***********页脚**********/
+#footer{
+	background: #2E363F;
+	color: #666;
+	line-height: 45px;
+	height: 45px;
+}
+#footer a{
+	color:#666;
+}
+#footer a:hover{
+	color: #28b779;
+}

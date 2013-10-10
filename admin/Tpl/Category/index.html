@@ -1,0 +1,54 @@
+<form id="pagerForm" method="post" action="__URL__/index">
+	<input type="hidden" name="pageNum" value="1" />
+	<input type="hidden" name="numPerPage" value="<{$numPerPage}>" />
+	<input type="hidden" name="orderField" value="" />
+	<input type="hidden" name="orderDirection" value="" />
+</form>
+
+<div class="pageHeader">
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="__URL__/add" rel="Category_add" target="dialog"  width="500" height="580" title="添加分类"><span><i class="icon-pencil"></i> 添加分类</span></a></li>
+			<li><a title="确实要删除这些分类吗?" target="selectedTodo" rel="id[]" href="__URL__/del" class="delete"><span><i class="icon-remove"></i> 批量删除</span></a></li>
+		
+		</ul>
+	</div>
+	<table class="table" layoutH="81" width="100%">
+		<thead>
+			<tr>
+				<th><input type="checkbox" group="id[]" class="checkboxCtrl"></th>
+				<th>ID</th>
+		        <th>名称</th>
+		        <th>类型</th>
+		        <th>URL名称</th>
+		        <th>状态</th>
+		        <th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			
+			<volist name="clist" id="vo">
+		          <tr>
+		          	 <td><input value="<{$vo.id}>" name="id[]" type="checkbox"></td>
+		            <td><{$vo.cid}></td>
+		            <td>
+						<php>
+						for($i=0;$i<($vo['count']-3)*3;$i++){
+									echo '-';
+						}
+						</php>
+					<{$vo.name}>
+		            </td>
+
+		            <td><eq name="vo.type" value="article">文章</eq><eq name="vo.type" value="product">产品</eq></td>
+		            <td><{$vo.url}></td>
+		            <td><eq name="vo.status" value="1">显示</eq><eq name="vo.status" value="2">隐藏</eq></td>
+		            <td><a href="__URL__/edit?cid=<{$vo.cid}>" rel="Category_edit" target="dialog"  width="500" height="580" title="编辑分类" class="btn btn-mini btn-info"><i class="icon-edit icon-white"></i>编辑</a>  <a href="__URL__/del?id=<{$vo.cid}>" title="删除" target="ajaxTodo" class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>删除</a></td>
+		          </tr>
+		      	  </volist>
+		
+		</tbody>
+	</table>
+</div>

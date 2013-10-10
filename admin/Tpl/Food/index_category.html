@@ -1,0 +1,63 @@
+<form id="pagerForm" method="post" action="#rel#">
+	<input type="hidden" name="pageNum" value="1" />
+	<input type="hidden" name="numPerPage" value="<{$numPerPage}>" />
+	<input type="hidden" name="orderField" value="" />
+	<input type="hidden" name="orderDirection" value="" />
+</form>
+
+<div class="pageHeader" style="display:none;">
+	<form rel="pagerForm" class="well" onsubmit="return navTabSearch(this);" action="__APP__/food/index" method="post">
+	</form>
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="__APP__/food/add_category?shop_id=<{$shop_id}>" rel="Srticle_add" target="dialog"  width="500" height="280" title="添加菜品分类"><span><i class="icon-pencil"></i> 添加菜品分类</span></a></li>
+			
+			<li><a title="确实要删除这些菜品吗?" target="selectedTodo" rel="id[]" href="__APP__/food/recycle_category" class="delete"><span><i class="icon-remove"></i> 批量删除</span></a></li>
+		
+		</ul>
+	</div>
+	<table class="table" layoutH="70" width="100%">
+		<thead>
+			<tr>
+				<th><input type="checkbox" group="id[]" class="checkboxCtrl"></th>
+				<th>ID</th>
+				<th>菜品分类名称</th>
+				<th>排序</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<volist name="list" id="vo">
+				<tr>
+				    <td><input value="<{$vo.id}>" name="id[]" type="checkbox"></td>
+				    <td><{$vo['id']}></td>
+				    <td><{$vo['name']}></td>
+				    <td><{$vo['display']}></td>
+				   
+				    <td>
+				    	<a href="__APP__/food/edit_category?cate_id=<{$vo.id}>" rel="FoodCategory_edit" target="dialog" width="500" height="280" class="btn btn-mini btn-info" title="菜品分类编辑"><i class="icon-edit icon-white"></i>编辑</a>   
+				    	<a href="__APP__/food/del_category?cate_id=<{$vo.id}>" class="btn btn-mini btn-danger" title="删除？" target="ajaxTodo" ><i class="icon-trash icon-white"></i>删除</a>
+				    </td>
+				</tr>
+			</volist>
+		
+		</tbody>
+	</table>
+	<div class="panelBar panBar">
+		<div class="pages">
+			<span>显示</span>
+			<select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
+				<option value="15" <eq name="numPerPage" value="15">selected="selected"</eq> >15</option>
+				<option value="50" <eq name="numPerPage" value="50">selected="selected"</eq> >50</option>
+				<option value="100" <eq name="numPerPage" value="100">selected="selected"</eq> >100</option>
+				<option value="200" <eq name="numPerPage" value="200">selected="selected"</eq> >200</option>
+			</select>
+			<span>条，共<{$count}>条</span>
+		</div>
+		
+		<div class="pagination" targetType="navTab" totalCount="<{$count}>" numPerPage="<{$numPerPage}>" pageNumShown="5" currentPage="<{$p}>"></div>
+
+	</div>
+</div>

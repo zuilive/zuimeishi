@@ -1,0 +1,51 @@
+<form class="form-horizontal" action="__APP__/page/add" method="post" onsubmit="return validateCallback(this, dialogAjaxDone);" layoutH="0">
+	<input type="hidden" name="type" value="page">
+	<div class="right-box well">
+		<label>状态：</label>
+        <label class="radio" style="font-size:13px;">
+            <input type="radio" name="status" id="" value="1" checked="">审核通过
+        </label>
+        <label class="radio" style="font-size:13px;">
+            <input type="radio" name="status" id="" value="2">待审核
+        </label>
+        <br>
+        <label for="url">URL名称：</label>
+        <input type="text" name="url" style="width: 100%;height: 35px;" class="input-medium" id="url" placeholder="URL名称...">
+
+	</div>
+
+	<div class="left-box well">
+			<div class="control-group">
+				<label for="title" class="control-label">页面标题：</label>
+				<div class="controls"><input class="input-xlarge" name="title" id="title" type="text" placeholder="请输入文章名..."></div>
+			</div>
+
+			<div class="control-group">
+				<label for="keywords" class="control-label">关键字：</label>
+				<div class="controls"><input class="input-xlarge" name="keywords" id="keywords" type="text" placeholder="请输入关键字..."></div>
+			</div>
+
+			<div class="control-group">
+				<label for="description" class="control-label">摘要：</label>
+				<div class="controls"><textarea name="description"class="input-xlarge" id="description"></textarea></div>
+			</div>
+
+			<div class="control-group">
+				<label for="content" class="control-label">内容：</label>
+				<div class="controls"><textarea name="content" id="content"></textarea></div>
+				<script type="text/javascript">
+					var editor = new UE.ui.Editor({
+  					initialFrameHeight:420,	//设置高度
+  					initialFrameWidth: '100%',
+  					textarea: 'content'	//设置提交时编辑器内容的名字，之前我们用的名字是默认的editorValue
+				   });
+				   editor.render("content")
+				</script>
+			</div>
+
+
+			<div class="control-group">
+				<label class="control-label"></label>
+				<div class="controls"><button type="submit" class="btn btn-primary btn-small">提交</button></div>
+			</div>
+		</form>

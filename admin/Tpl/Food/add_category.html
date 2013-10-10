@@ -1,0 +1,27 @@
+<form class="form-horizontal cate well" id="zForm" onsubmit="return validateCallback(this, dialogAjaxDone);" layoutH="0" action="__APP__/food/add_category" method="post">
+				  <fieldset>
+				    <input name="shop_id" type="hidden" value="<{$shop_id}>" />
+
+				    <div class="control-group">
+				      <label class="control-label" for="name">分类名：</label>
+				      <div class="controls">
+				        <input type="text" class="input-xlarge required" id="name" name="name" placeholder="请输入菜品分类名...">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="display">排序：</label>
+				      <div class="controls">
+				        <input type="text" class="input-small required" id="display" placeholder="排序..." name="display"> (数值越大越靠前)
+				      </div>
+				    </div>
+
+
+			        <div class="control-group">
+				      <label class="control-label" for="pid"></label>
+				      <div class="controls">
+				        <button type="submit" class="btn btn-primary btn-small">提交</button>
+				      </div>
+				</div>
+				</fieldset>
+				</form>

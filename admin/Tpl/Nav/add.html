@@ -1,0 +1,41 @@
+<div style="padding:10px;" layoutH="0">
+	<form class="form-horizontal cate well" onsubmit="return validateCallback(this, dialogAjaxDone);" action="__APP__/nav/add" method="post">
+				  <fieldset>
+				    <input type="hidden" name="id" value="<{$info.id}>">
+				    <div class="control-group">
+				      <label class="control-label" for="name">导航名称：</label>
+				      <div class="controls">
+				        <input type="text" class="input-xlarge required" id="name" name="name"placeholder="请输入导航名称...">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="url">URL：</label>
+				      <div class="controls">
+				        <input type="text" class="input-xlarge required" id="url" placeholder="请输入URL..." name="url">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="group">分组名：</label>
+				      <div class="controls">
+				        <input type="text" class="input-xlarge required" id="group" placeholder="请输入分组名..." name="group">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="display">排序：</label>
+				      <div class="controls">
+				        <input type="text" class="input-xlarge" id="display" placeholder="请输入排序号..." name="display">
+				      </div>
+				    </div>
+
+			        <div class="control-group">
+				      <label class="control-label" for="pid"></label>
+				      <div class="controls">
+				        <button type="submit" class="btn btn-primary btn-small">提交</button>
+				      </div>
+				    </div>
+				  </fieldset>
+				</form>
+</div>

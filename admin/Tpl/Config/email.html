@@ -1,0 +1,74 @@
+<div layoutH="0" style="padding:10px;">			
+			<ul class="nav nav-pills" style="height:32px;border-bottom:1px solid #dedede;" >
+			    <li><a href="__APP__/config/index" rel="Config_index" target="navTab" title="站点设置">站点设置</a></li>
+			    <li class="active"><a href="__APP__/config/email" rel="Config_email" target="navTab" title="邮箱设置">邮箱设置</a></li>
+			</ul>
+			
+			<form class="form-horizontal cate well" onsubmit="return validateCallback(this, navTabAjaxDone);" id="emailset" action="__APP__/Config/email" method="post">
+				  <fieldset>  
+				    <div class="control-group">
+				      <label class="control-label" >发送模式：</label>
+				      <div class="controls">
+				      	<input type="checkbox" value="1" <eq name="list['0']['value']" value="1">checked="checked"</eq> > SMTP
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="mail_server">邮件服务器地址：</label>
+				      <div class="controls">
+				        <input type="text" class="input-xlarge" value="<{$list['1']['value']}>" id="mail_server" name="mail_server"placeholder="请输入邮件服务器地址...">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="mail_port">邮件发送端口：</label>
+				      <div class="controls">
+				        <input type="text" value="<{$list['2']['value']}>"  class="input-xlarge" id="mail_port" placeholder="请输入邮件发送端口..." name="mail_port">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="mail_from">发件人地址：</label>
+				      <div class="controls">
+				        <input type="text" value="<{$list['3']['value']}>"  class="input-xlarge" id="mail_from" placeholder="请输入发件人地址..." name="mail_from">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="auth">AUTH LOGIN验证：</label>
+				      <div class="controls">
+				        <input type="radio" name="auth" value="1" <eq name="list['0']['value']" value="1">checked="checked"</eq> > 开启 &nbsp;&nbsp;
+				        <input type="radio" name="auth" value="0" <eq name="list['0']['value']" value="0">checked="checked"</eq> > 关闭
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="mail_user">邮箱用户名：</label>
+				      <div class="controls">
+				        <input type="text" value="<{$list['5']['value']}>"  class="input-xlarge" id="mail_user" placeholder="请输入邮箱用户名..." name="mail_user">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="mail_password">邮箱密码：</label>
+				      <div class="controls">
+				        <input type="password" value="<{$list['6']['value']}>"  class="input-xlarge" id="mail_password" placeholder="请输入邮箱密码..." name="mail_password">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="mail_fname">发件人名称：</label>
+				      <div class="controls">
+				        <input type="text" value="<{$list['7']['value']}>"  class="input-xlarge" id="mail_fname" placeholder="请输入发件人名称..." name="mail_fname">
+				      </div>
+				    </div>
+
+			        <div class="control-group">
+				      <label class="control-label" for="pid"></label>
+				      <div class="controls">
+				        <button type="submit" class="btn btn-primary btn-small">提交</button>
+				      </div>
+				    </div>
+				  </fieldset>
+				</form>
+</div>

@@ -1,0 +1,74 @@
+<form class="form-horizontal cate well" id="zForm" onsubmit="return validateCallback(this, dialogAjaxDone);" id="zForm" action="__APP__/member/add" layoutH="0" method="post">
+				  <fieldset>
+				    <input type="hidden" value="<{$encrypt}>" name="encrypt">
+				    <div class="control-group">
+				      <label class="control-label" for="username">会员名：</label>
+				      <div class="controls">
+				        <input type="text" class="input-xlarge required" id="username" name="username"placeholder="请输入会员名...">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="password">密码：</label>
+				      <div class="controls">
+				        <input type="password" class="input-xlarge required" id="password" placeholder="请输入密码..." name="password">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="repassword">确认密码：</label>
+				      <div class="controls">
+				        <input type="password" class="input-xlarge required" id="repassword" placeholder="请输入确认密码..." name="repassword">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="email">邮箱：</label>
+				      <div class="controls">
+				        <input type="text" class="input-xlarge required email" id="email" placeholder="请输入邮箱地址..." name="email">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="groupid">会员组：</label>
+				      <div class="controls">
+				        <select id="groupid" name="groupid">
+							<volist name="mgroup" id="vo">
+			            	<option value="<{$vo.groupid}>"><{$vo.name}></option>
+			            	</volist>
+			            </select>
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+			            <label class="control-label">状态：</label>
+			            <div class="controls">
+			              <label class="radio">正常
+			                <input type="radio" style="height:auto;" name="islock" id="islock" value="1" checked="checked"></label>
+
+			              <label class="radio">锁定
+			                <input type="radio" style="height:auto;" name="islock" id="islock" value="0">
+			              </label>
+			            </div>
+			         </div>
+
+			         <div class="control-group">
+			            <label class="control-label">是否审核：</label>
+			            <div class="controls">
+			              <label class="radio">审核通过
+			                <input type="radio" style="height:auto;" name="checked" id="checked" value="1" checked="checked"></label>
+
+			              <label class="radio">未审核
+			                <input type="radio" style="height:auto;" name="checked" id="checked" value="0">
+			              </label>
+			            </div>
+			         </div>
+
+			        <div class="control-group">
+				      <label class="control-label" for="pid"></label>
+				      <div class="controls">
+				        <button type="submit" class="btn btn-primary btn-small">提交</button>
+				      </div>
+				    </div>
+				  </fieldset>
+				</form>

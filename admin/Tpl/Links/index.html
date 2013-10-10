@@ -1,0 +1,42 @@
+
+<form id="pagerForm" method="post" action="#rel#">
+	
+</form>
+
+<div class="pageHeader" style="display:none;">
+	<form rel="pagerForm" class="well" onsubmit="return navTabSearch(this);" action="__APP__/nav/index" method="post">
+	
+	</form>
+</div>
+<div class="pageContent">
+<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="__APP__/links/add" rel="Links_add" title="添加导航" target="dialog"  width="460" height="280"><span><i class="icon-plus"></i> 添加链接</span></a></li>
+			<li><a title="确实要删除这些链接吗?" target="selectedTodo" rel="id[]" href="__APP__/links/del" class="delete"><span><i class="icon-remove"></i> 批量删除</span></a></li>
+		
+		</ul>
+	</div>
+	<table class="table" layoutH="0" width="100%">
+		<thead>
+			<th><input type="checkbox" group="id[]" class="checkboxCtrl"></th>
+			<th>ID</th>
+		    <th>名称</th>
+		    <th>URL</th>
+		    <th>操作</th>
+		</thead>
+		<tbody>
+			<volist name="links" id="vo">
+			<tr>
+				<td><input value="<{$vo.id}>" name="id[]" type="checkbox"></td>
+				<td><{$vo.id}></td>
+		        <td>
+					<{$vo.name}>
+		        </td>
+		        <td><{$vo.url}></td>
+		        <td><a href="__APP__/links/edit?id=<{$vo.id}>" rel="Links_edit" target="dialog"  width="460" height="280" title="链接编辑" class="btn btn-mini btn-info" ><i class="icon-edit icon-white"></i>编辑</a>  <a href="__APP__/links/del?id=<{$vo.id}>" title="删除?" target="ajaxTodo" class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>删除</a></td>
+			</tr>
+			</volist>
+		
+		</tbody>
+	</table>
+</div>

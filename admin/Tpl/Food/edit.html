@@ -1,0 +1,73 @@
+<form class="form-horizontal cate well" id="zForm" onsubmit="return validateCallback(this, dialogAjaxDone);" layoutH="0" action="__APP__/food/edit" method="post">
+				  <fieldset>
+				    <input name="id" type="hidden" value="<{$info['id']}>" />
+
+				    <div class="control-group">
+				      <label class="control-label" for="name">菜品名：</label>
+				      <div class="controls">
+				        <input type="text" class="input-xlarge required" id="name" name="name" value="<{$info['name']}>" placeholder="请输入菜品名...">
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="prize">价格：</label>
+				      <div class="controls">
+				        <input type="text" class="input-small required" id="prize"  value="<{$info['prize']}>" placeholder="价格..." name="prize"> 元
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="cate_id">菜品分类：</label>
+				      <div class="controls">
+				        <select id="select" class="input-larger" name="cate_id">
+						<volist name="food_category" id="vo">
+				          		<option value="<{$vo.id}>"><{$vo.name}></option>
+				     	  	</volist>
+				        </select>
+				      </div>
+				    </div>
+
+				    <div class="control-group">
+				      <label class="control-label" for="picture">缩略图：</label>
+				      <div class="controls">
+				        <img id="photo" src="__ROOT__/Upload/<{$info['photo']|default="default.png"}>" alt="">
+					<input id="testFileInput" type="file" name="image" 
+							uploaderOption="{
+								swf:'__PUBLIC__/js/uploadify/scripts/uploadify.swf',
+								uploader:'__APP__/article/upload',
+								buttonText:'请选择文件',
+								fileSizeLimit:'2000KB',
+								fileTypeDesc:'*.jpg;*.jpeg;*.gif;*.png;',
+								fileTypeExts:'*.jpg;*.jpeg;*.gif;*.png;',
+								auto:true,
+								multi:false,
+								onUploadSuccess:uploadifySuccess,
+							}"
+					/>
+					<input type="hidden" name="photo" id="thumbnails" value="<{$info['photo']}>"/>
+				      </div>
+				    </div>
+
+				    
+
+				    <div class="control-group">
+			            <label class="control-label">状态：</label>
+			            <div class="controls">
+			              <label class="radio">正常
+			                <input type="radio" style="height:auto;" name="status" id="status" value="1" checked="checked"></label>
+
+			              <label class="radio">未发布
+			                <input type="radio" style="height:auto;" name="status" id="status" value="2">
+			                </label>
+			              
+			            </div>
+			         </div>
+
+			        <div class="control-group">
+				      <label class="control-label" for="pid"></label>
+				      <div class="controls">
+				        <button type="submit" class="btn btn-primary btn-small">提交</button>
+				      </div>
+				</div>
+				</fieldset>
+				</form>
